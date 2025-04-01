@@ -1,55 +1,61 @@
-<p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
-</p>
+# 🛠️ osTicket - Prerequisites and Installation Guide
 
-<h1>osTicket - Prerequisites and Installation</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+This guide outlines the prerequisites and step-by-step installation process for setting up **osTicket**, an open-source help desk ticketing system, on a Windows environment using IIS.
 
+## ✅ Environments and Technologies Used
 
-<h2>Video Demonstration</h2>
+- **Microsoft Azure** – Virtual Machines (Compute)
+- **Windows 10 (21H2)** – Operating System
+- **Remote Desktop Protocol (RDP)** – For VM access
+- **Internet Information Services (IIS)** – Web Server
+- **PHP** – Backend scripting language
+- **MySQL** – Database engine
+- **osTicket v1.x** – Help desk system
 
-- ### [YouTube: How To Install osTicket with Prerequisites](https://www.youtube.com)
+---
 
-<h2>Environments and Technologies Used</h2>
+## 📋 Prerequisites
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Internet Information Services (IIS)
+Ensure the following components are installed **before** proceeding with osTicket setup:
 
-<h2>Operating Systems Used </h2>
+1. **Windows 10 (21H2)** VM or local machine  
+2. **IIS (Internet Information Services)** with the following features:
+   - CGI
+   - Common HTTP Features
+3. **PHP Manager for IIS**
+4. **PHP**
+5. **MySQL Server**
 
-- Windows 10</b> (21H2)
+---
 
-<h2>List of Prerequisites</h2>
+## 🚀 Installation Steps
+![image](https://github.com/user-attachments/assets/14ad2d01-df00-4469-9997-c71e69b9a4ad)
+### Step 1: Prepare the Environment
+- Launch your Windows 10 VM or machine.
+- Open `Server Manager > Manage > Add Roles and Features`.
+- Install **Web Server (IIS)** and the required role services listed in prerequisites.
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+![image](https://github.com/user-attachments/assets/53bcb6ea-976e-41bd-a509-cf635df6a297)
+### Step 2: Install PHP, ReWrite, Virtual Code
+- Download and install PHP for Windows from the official PHP website.
+- Configure PHP to work with IIS using **PHP Manager for IIS**.
+- PHP will be responsible for backend scripting ... PHP will interact with MySQL to manage the database
 
-<h2>Installation Steps</h2>
+![image](https://github.com/user-attachments/assets/b2bf8e24-8f69-4f10-a2eb-725fea2bb730)
+### Step 3: Install MySQL
+- Download and install MySQL and setup configuration
+- Launch with username and password
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+![image](https://github.com/user-attachments/assets/2907f604-1af4-432f-bf73-b0bbf3b947b0)
+### Step 4: Install osTicket & Launch osTicket
+- Download and extract osTicket folder into upload folder in wwwroot
+- rename upload folder to osTicket
+- Enable osTicket extensions
+- Rename ost-sampleconfig.php --> ost-config.php & assign new permissions
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+### Step 5: Install & Configure HeidiSQL
+- Create new session with username and password from MySQL
+- Connect to the session
+- Create database for osTicket
+  
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
