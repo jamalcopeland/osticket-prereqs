@@ -53,13 +53,12 @@ Ensure the following components are installed **before** proceeding with osTicke
 - Enable osTicket extensions
 - Rename ost-sampleconfig.php --> ost-config.php & assign new permissions
 
-![image](https://github.com/user-attachments/assets/d26307a6-0630-4475-a497-20c7fc6ca02d)
 ![image](https://github.com/user-attachments/assets/ed50c679-5daf-4c95-b5cc-bf3cd61a399c)
-
-
 ### Step 5: Install & Configure HeidiSQL
 - Create new session with username and password from MySQL
 - Connect to the session
 - Create database for osTicket
-  
 
+![image](https://github.com/user-attachments/assets/97ddb775-2cef-4785-b612-eaec883926ea)
+### Step 6: Login to osTicket
+- Login using created username and password
